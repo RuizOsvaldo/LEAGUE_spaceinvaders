@@ -238,22 +238,22 @@ game.onUpdateInterval(2500, function () {
 })
 ```
 
-## Step 15 - Create custom sprite kind for boss
-
-We need a special kind of enemy for the boss! At the very top of your code, before everything else, add this namespace to create a new sprite kind called Miniboss:
-```blocks
-namespace SpriteKind {
-    export const Miniboss = SpriteKind.create()
-}
-```
-
-## Step 16 - Spawn boss enemies
+## Step 15 - Spawn boss enemies
 
 Now add another ``||game:on game update every||`` and set it to `2000` ms to spawn boss enemies slightly more often than regular aliens.
 ```blocks
 game.onUpdateInterval(2000, function () {
     
 })
+```
+
+## Step 16 - Create custom sprite kind for boss
+
+We need a special kind of enemy for the boss! Place it inside of your new Game Update, and change the kind to a new one                      called Miniboss:
+```blocks
+namespace SpriteKind {
+    export const Miniboss = SpriteKind.create()
+}
 ```
 
 ## Step 17 - Create boss variable
